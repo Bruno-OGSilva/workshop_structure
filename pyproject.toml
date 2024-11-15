@@ -14,6 +14,11 @@ blue = "^0.9.1"
 isort = "^5.13.2"
 pydocstyle = "^6.3.0"
 pip-audit = "^2.7.3"
+mkdocs = "^1.6.1"
+mkdocstrings-python = "^1.12.2"
+pygments = "^2.18.0"
+mkdocs-material = "^9.5.44"
+pymdown-extensions = "^10.12"
 
 
 [build-system]
@@ -23,3 +28,6 @@ build-backend = "poetry.core.masonry.api"
 [tool.isort]
 profile= "black"
 know_third_party = []
+
+[tool.taskipy.tasks]
+kill = "kill -9 $(lsof -t -i :8000)"
